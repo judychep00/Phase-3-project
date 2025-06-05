@@ -1,36 +1,46 @@
 # Phase-3-project
 
-Customer Churn Prediction for SyriaTel
+The goal of this project is to build a machine learning classifier that predicts customer churn for SyriaTel, a telecommunications company. By identifying customers who are likely to stop using the service, the company can implement targeted retention strategies to reduce revenue loss.
 
-This project focuses on building a classification model to predict customer churn for SyriaTel, a telecommunications company. Churn prediction helps identify customers who are likely to stop using the service, allowing the company to take proactive retention measures.
+Business and Data Understanding: The primary stakeholder is SyriaTel's business team, including marketing, customer support, and product management. Their key interest is in reducing churn to maintain customer base and revenue.
 
-Data Source:(telecom churn dataset): Contains customer account details, usage metrics, service plans, and whether or not the customer churned.
+The dataset contains anonymized customer account data, such as usage patterns, service plans, and churn status. It includes variables like:International and voice mail plan
 
-Tools & Technologies
+Number of customer service calls
 
-Languages: Python
+Total minutes and charges for day, evening, night, and international calls
 
-Libraries: Pandas, NumPy, Scikit-learn, XGBoost, Matplotlib, Seaborn
+The task is to find patterns that reliably predict whether a customer is likely to churn.
 
-Environment:   Vs code 
+ Modeling:  Three machine learning models were trained and evaluated:
 
-Version Control: Git, GitHub
+Logistic Regression (with and without hyperparameter tuning)
 
-Visualization: PowerPoint for presentation-ready insights
+XGBoost Classifier (with GridSearchCV tuning)
 
-Problem Statement: Build a machine learning model to predict whether a customer will churn (leave SyriaTel). The main business goal is to reduce revenue loss by identifying customers at high risk and targeting them with retention strategies.
+Decision Tree Classifier
 
-Methodology
-Data Understanding: Explored distributions, correlations, and class imbalance.
+The modeling process included: Train-test splitting,  Feature scaling, Hyperparameter tuning using GridSearchCV, Model comparison based on classification metrics
 
-Data Cleaning: Dropped irrelevant columns (e.g., customer ID), applied One-Hot Encoding to categorical variables.
+Evaluation: Each model was evaluated using accuracy, F1 score, precision, recall, and ROC curves to assess performance on the test data.
+Key findings: XGBoost was the best-performing model, Important features influencing churn: international plan, customer service calls, total day minutes/charges, These insights were used to guide business recommendations.
 
-Modeling: Trained multiple models: Logistic Regression, XGBoost, Decision Tree
+![image](https://github.com/user-attachments/assets/eecf9c71-1f71-440e-bb80-de10840263d6)  it shows performance of the models.
 
-Applied hyperparameter tuning using GridSearchCV
+![image](https://github.com/user-attachments/assets/f48df76c-180c-42c7-b7c6-198ce8dcca75) Shows how some of the important features were evaluated before modelling.
 
-Evaluation: Evaluated using Accuracy, F1 Score, Precision, Recall, ROC Curve
+Conclusion
+The model successfully identifies high-risk customers with strong predictive performance. Business teams at SyriaTel can now act proactively by targeting at-risk customers through:
 
-Interpretation: Identified key features influencing churn: international plan, customer service calls, total day minutes
+Better support experiences
 
-Recommendations: Provide actionable insights to reduce churn based on model findings
+Incentivized retention plans
+
+Adjusting plans based on usage behavior
+
+This project demonstrates how machine learning can drive business value by turning raw data into actionable insights
+
+![image](https://github.com/user-attachments/assets/4a2f5474-58f6-41dc-8c13-cc7b33ae5f64) helped us to come up with some of the solutions as you will see in the presentation.
+
+
+
